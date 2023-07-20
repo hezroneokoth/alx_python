@@ -6,5 +6,5 @@ def add(a, b):
         a = a ^ b
         b = carry << 1
     if a & (1 << 31):
-        a = add(~a, 1)
+        a = -add(~a, 1)
     return a
