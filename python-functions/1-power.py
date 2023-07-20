@@ -8,4 +8,4 @@ def pow(a, b):
             result *= a
         a *= a
         b >>= 1
-    return result
+    return round(result, 10)
