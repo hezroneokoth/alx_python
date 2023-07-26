@@ -2,8 +2,6 @@
 
 ## Learning Objectives
 
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-
 ### General
 
 1. Why Python programming is awesome
@@ -58,7 +56,7 @@ Prototype: def print_matrix_integer(matrix=[[]]):
 
     You have to use str.format() to print integers
 
-### 2. More returns!
+### 2. More returns
 
 Write a function that returns a tuple with the length of a string and its first character.
 
