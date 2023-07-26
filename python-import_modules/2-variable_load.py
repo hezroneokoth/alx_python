@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+import variable_load_2
+
 if __name__ == "__main__":
-    from variable_load_2 import a
-    print(a)
+    print(variable_load_2.a)
