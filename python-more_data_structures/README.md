@@ -287,7 +287,7 @@ If you have a suggestion that would make this project better, please fork the re
 
 ## License & Copyright
 
-Distributed under the MIT License. See LICENSE.txt for more information.
+Distributed under MIT license. See LICENSE.txt for more information.
 
 In regards with copyright, all lie with the developer
 
