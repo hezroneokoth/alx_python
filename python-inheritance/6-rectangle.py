@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""This is a module that contains a class BaseGeometry with an area() function."""
+"""This is a module that contains a Rectangle class that inherits from BaseGeometry"""
 
 class Rectangle(BaseGeometry):
     """A class representing a rectangle."""
