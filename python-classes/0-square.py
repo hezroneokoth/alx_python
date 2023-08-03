@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 
 class Square:
-    """This is a class that defines a square."""
+    """This is a class that defines a square.
+    
+    It has one method that contains two attributes i.e. self and size.
+    """
     
     def __init__(self, size):
         """This method/constructor initializes the Square instance with a given size.
