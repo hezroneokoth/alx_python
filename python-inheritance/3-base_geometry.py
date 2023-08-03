@@ -4,5 +4,12 @@
 
 class BaseGeometry:
     """This is an empty class BaseGeometry."""
-    pass
 
+    def __init__(self):
+        """
+        An __innit__ method that initializes the attribute self"""
+        pass
+
+    def __dir__(self):
+        """A custom __dir__ method to override default behavior."""
+        return []
