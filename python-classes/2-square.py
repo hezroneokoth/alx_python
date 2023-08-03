@@ -1,5 +1,11 @@
 #!/usr/bin/python3
 
+"""
+This module is for a class square
+
+that defines a square by a private instance attribute 'size'.
+"""
+
 class Square:
     """This is a class that defines a square."""
 
