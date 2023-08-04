@@ -1,20 +1,11 @@
 #!/usr/bin/python3
 
-"""This is a module that contains a class BaseGeometry."""
+"""This is a module that contains an empty class BaseGeometry."""
 
 class BaseGeometry:
     """This is an empty class BaseGeometry."""
 
-    def __init__(self):
-        """An __innit__ method that initializes the attribute self."""
-        pass
-
     def __dir__(self):
-        """A custom __dir__ method to override default behavior."""
-        return []
-    
-bg = BaseGeometry()
-
-print(bg)
-print(dir(bg))
-print(dir(BaseGeometry))
+        """This __dir__ method overrides the behaviour of dir() to exclude __init_subclass__"""
+        attributes = super().__dir__()
+        return [attr for attr in attributes if attr != '__init_subclass__']
