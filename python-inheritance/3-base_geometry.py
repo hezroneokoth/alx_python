@@ -7,6 +7,6 @@ class BaseGeometry:
 
     def __dir__(self):
         """This __dir__ method overrides the behaviour of dir() to exclude __init_subclass__"""
-        attributes = list(super().__dir__())
+        attributes = super().__dir__()
         attributes.remove('__init_subclass__')
         return attributes
