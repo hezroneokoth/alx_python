@@ -1,12 +1,18 @@
 #!/usr/bin/python3
 
 """This is a module that contains an empty class BaseGeometry."""
-
 class BaseGeometry:
-    """This is an empty class BaseGeometry."""
+    """An empty class."""
 
     def __dir__(self):
-        """This __dir__ method overrides the behaviour of dir() to exclude __init_subclass__"""
+        """Override dir() to exclude __init_subclass__."""
         attributes = super().__dir__()
         attributes.remove('__init_subclass__')
         return attributes
+
+
+bg = BaseGeometry()
+
+print(bg)
+print(dir(bg))
+print(dir(BaseGeometry))
