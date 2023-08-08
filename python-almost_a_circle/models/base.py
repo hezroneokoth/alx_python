@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" A base module containing the class base."""
+""" A Base module containing the class Base."""
 
-class base:
-    """The base class."""
+class Base:
+    """The Base class."""
     __nb_objects = 0
 
     def __innit__ (self, id=None):
