@@ -6,7 +6,7 @@ class Rectangle(Base):
     """ Rectangle class that inherits from Base """
     
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ An initialization Constructor method """
+        """ Constructor method that initializes the objects shown """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -68,3 +68,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+    
+    def area(self):
+        """ This method calculates and returns the area of the Rectangle"""
+        return self.__width * self.__height
