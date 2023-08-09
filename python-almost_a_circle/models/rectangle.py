@@ -74,9 +74,10 @@ class Rectangle(Base):
         return self.__width * self.__height
     
     def display(self):
-        """ This method displays the Rectangle instance with # characters"""
+        """ This method displays the Rectangle -- taking care of x and y -- with # characters"""
+        print("\n" * self.__y, end="")
         for _ in range(self.__height):
-            print("#" * self.__width)
+            print(" " * self.__x + "#" * self.__width)
             
     def __str__(self):
         """ This method overrides __str__ to return [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
