@@ -6,4 +6,4 @@ class BaseGeometry:
 
     def __dir__(self):
         """Override dir() to exclude __init_subclass__."""
-        return [attr for attr in dir(BaseGeometry) if attr != '__init_subclass__']
+        return list(filter(lambda attr: attr != '__init_subclass__', dir(BaseGeometry)))
