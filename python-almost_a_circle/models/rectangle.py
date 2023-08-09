@@ -77,3 +77,8 @@ class Rectangle(Base):
         """ This method displays the Rectangle instance with # characters"""
         for _ in range(self.__height):
             print("#" * self.__width)
+            
+    def __str__(self):
+        """ This method overrides __str__ to return [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height)
