@@ -84,8 +84,12 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height)
 
-    def update(self, *args):
-        """ This method adds arguments to attributes in the given order"""
-        attributes = ["id", "width", "height", "x", "y"]
-        for index, value in enumerate(args):
-            setattr(self, attributes[index], value)
+    def update(self, *args, **kwargs):
+        """ This method adds both positional and keyword arguments to attributes in the given order"""
+        if args:
+            attributes = ["id", "width", "height", "x", "y"]
+            for index, value in enumerate(args):
+                setattr(self, attributes[index], value)
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
