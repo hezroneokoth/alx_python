@@ -9,8 +9,8 @@ import sys
 """ import script"""
 
 if __name__ == "__main__":
-    username = hezroneokoth
-    token = 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
+    username = sys.argv[1]
+    token = sys.argv[2] 
 
     url = "https://api.github.com/user"
     response = requests.get(url, auth=(username, token))
