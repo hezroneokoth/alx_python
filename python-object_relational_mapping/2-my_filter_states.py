@@ -27,7 +27,7 @@ if __name__ == "__main__":
     cur = conn.cursor()
 
     # creates query using format
-    query = ("SELECT * FROM states WHERE name = '{}' "
+    query = ("SELECT * FROM states WHERE LOWER(name) = LOWER('{}') "
              "ORDER BY states.id".format(state_name))
     cur.execute(query)
 
