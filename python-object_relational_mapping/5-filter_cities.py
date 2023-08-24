@@ -27,7 +27,11 @@ if __name__ == "__main__":
     cur = conn.cursor()
 
     # Creates query
-    query = "SELECT cities.name FROM cities JOIN states ON cities.state_id = states.id WHERE states.name = %s ORDER BY cities.id"
+    query = (
+        "SELECT cities.name FROM cities "
+        "JOIN states ON cities.state_id = states.id "
+        "WHERE states.name = %s ORDER BY cities.id"
+    )
     cur.execute(query, (state_name,))
 
     # Fetches & prints results
