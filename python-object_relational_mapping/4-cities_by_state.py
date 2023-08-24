@@ -26,14 +26,16 @@ if __name__ == "__main__":
     cur = conn.cursor()
 
     # executes query
-    query = "SELECT * FROM cities ORDER BY cities.id ASC"
+    query = "SELECT cities.id, cities.name, states.name FROM cities \
+        JOIN states ON cities.state_id = states.id \
+            ORDER BY cities.id ASC"
     cur.execute(query)
-
+    
     # fetches & prints results
     results = cur.fetchall()
     for row in results:
-        city_id, state_id, city_name, state_name = row
-        print(city_id, state_id, city_name, state_name)
+        city_id, city_name, state_name = row
+        print(city_id, city_name, state_name)
 
     # closes cursor & connection
     cur.close()
