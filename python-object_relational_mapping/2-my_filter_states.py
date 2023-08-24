@@ -26,10 +26,10 @@ if __name__ == "__main__":
     # creates cursor to execute queries
     cur = conn.cursor()
 
-    # creates query using format and LOWER() fun for case-insensitive search
-    query = ("SELECT * FROM states WHERE LOWER(name) = LOWER('{}') "
-             "ORDER BY states.id".format(state_name))
-    cur.execute(query)
+    # creates query using format & LIKE for case-sensitive search
+    query = ("SELECT * FROM states WHERE name COLLATE utf8_general_ci "
+             "LIKE %s ORDER BY states.id")
+    cur.execute(query, (state_name,))
 
     # fetches & prints results
     results = cur.fetchall()
