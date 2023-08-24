@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-script displays values in states table where name matches arg provided
+script displays values in states table where name matches argument provided
 """
 
 import sys
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     # creates cursor to execute queries
     cur = conn.cursor()
 
-    # creates query using format
+    # creates query using format and LOWER() function for case-insensitive search
     query = ("SELECT * FROM states WHERE LOWER(name) = LOWER('{}') "
              "ORDER BY states.id".format(state_name))
     cur.execute(query)
