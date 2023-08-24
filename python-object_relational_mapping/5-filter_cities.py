@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Script lists all cities from hbtn_0e_4_usa db
+script lists all cities from hbtn_0e_4_usa db
 """
 
 import sys
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     # Fetches & prints results
     results = cur.fetchall()
     for row in results:
-        print(row[0])
+        print(row)
 
     # Closes cursor & connection
     cur.close()
