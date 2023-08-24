@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" script lists all states with name starting with 'N' from hbtn_0e_0_usa db."""
+""" script lists all states starting with 'N' from hbtn_0e_0_usa db."""
 
 import sys
 import MySQLdb
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     cur = conn.cursor()
 
     # executes the query
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC")
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
 
     # fetches & prints results
     results = cur.fetchall()
