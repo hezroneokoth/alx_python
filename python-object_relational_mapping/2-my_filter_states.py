@@ -13,7 +13,7 @@ if __name__ == "__main__":
     db_name = sys.argv[3]
     state_name = sys.argv[4]
 
-    # connects to MySQL server thru port 3306 on localhost
+    # connects to server thru port 3306 on localhost
     conn = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -27,7 +27,7 @@ if __name__ == "__main__":
     cur = conn.cursor()
 
     # creates query
-    query = "SELECT * FROM states WHERE name = %s ORDER BY states.id ASC"
+    query = "SELECT * FROM states WHERE name = %s ORDER BY states.id"
     cur.execute(query, (state_name,))
 
     # fetches & prints results
