@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
     # creates query using format
     query = ("SELECT * FROM states WHERE name = '{}' "
-         "ORDER BY states.id".format(state_name))
+             "ORDER BY states.id".format(state_name))
     cur.execute(query)
 
     # fetches & prints results
