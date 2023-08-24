@@ -34,8 +34,7 @@ if __name__ == "__main__":
     # fetches & prints results
     results = cur.fetchall()
     for row in results:
-        city_id, city_name, state_name = row
-        print(city_id, city_name, state_name)
+        print(row)
 
     # closes cursor & connection
     cur.close()
