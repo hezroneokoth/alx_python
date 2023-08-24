@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" 
-script displays values in states table where name matches argument provided
+"""
+script displays values in states table where name matches arg provided
 """
 
 import sys
@@ -26,9 +26,9 @@ if __name__ == "__main__":
     # creates cursor to execute queries
     cur = conn.cursor()
 
-    # creates query
-    query = "SELECT * FROM states WHERE name = %s ORDER BY states.id"
-    cur.execute(query, (state_name,))
+    # creates query using format
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY states.id".format(state_name)
+    cur.execute(query)
 
     # fetches & prints results
     results = cur.fetchall()
