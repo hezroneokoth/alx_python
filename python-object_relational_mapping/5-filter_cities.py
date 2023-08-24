@@ -32,8 +32,8 @@ if __name__ == "__main__":
 
     # Fetches & prints results
     results = cur.fetchall()
-    for row in results:
-        print(row)
+    city_names = [row[0] for row in results]
+    print(', '.join(city_names))
 
     # Closes cursor & connection
     cur.close()
