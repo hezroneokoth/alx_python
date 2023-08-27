@@ -3,7 +3,7 @@
 This script starts a Flask web application.
 The web app listens on 0.0.0.0 port 5000. """
 
-from flask import Flask
+from flask import Flask, render_template
 from urllib.parse import unquote
 """ imports statements"""
 
