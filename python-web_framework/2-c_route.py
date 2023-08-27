@@ -3,10 +3,9 @@
 This script starts a Flask web application.
 The web app listens on 0.0.0.0 port 5000. """
 
-""" imports statements"""
 from flask import Flask
 from urllib.parse import unquote
-
+""" imports statements"""
 
 app = Flask(__name__)
 
