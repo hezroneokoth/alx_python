@@ -445,3 +445,17 @@ Project Link: https://github.com/hezroneokoth/alx_python
 This is a list of resources that I have used during the course of this project;
 
 ALX School Concept Page
+
+What is a Web Framework? - https://intelegain-technologies.medium.com/what-are-web-frameworks-and-why-you-need-them-c4e8806bd0fb
+
+A minimal application - https://flask.palletsprojects.com/en/2.3.x/quickstart/#a-minimal-application
+
+Routing - https://flask.palletsprojects.com/en/2.3.x/quickstart/#routing
+
+Rendering Templates - https://flask.palletsprojects.com/en/2.3.x/quickstart/#rendering-templates
+
+Synopsis, variables, comments, white-space controls  - https://jinja.palletsprojects.com/en/3.0.x/templates/
+
+List of control structures - https://jinja.palletsprojects.com/en/2.9.x/templates/#list-of-control-structures
+
+Flask - https://palletsprojects.com/p/flask/
