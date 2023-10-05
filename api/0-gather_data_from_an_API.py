@@ -7,40 +7,41 @@ and returns info about the employee's TODO list progress."""
 import requests
 import sys
 
-def get_employee_data(employee_id):
+# this function block gets employee's TODO progress
+def generate_employee_todo_progress(employee_id):
+    user_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
+    todos_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
 
-    # defines the base URL for the API
-    base_url = "https://jsonplaceholder.typicode.com"
-
-    # gete employee's details
-    user_response = requests.get(f"{base_url}/users/{employee_id}")
+    # fetches employee's name and other details
+    user_response = requests.get(user_url)
     user_data = user_response.json()
+    employee_name = user_data['name']
 
-    # get the employee's TODO list
-    todos_response = requests.get(f"{base_url}/users/{employee_id}/todos")
+    # fetches the employee's TODO list
+    todos_response = requests.get(todos_url)
     todos_data = todos_response.json()
 
-    return user_data, todos_data
+    # calculates the employee's completed tasks
+    completed_tasks = [todo for todo in todos_data if todo['completed']]
+    total_tasks = len(todos_data)
+    completed_count = len(completed_tasks)
 
-# checks if the correct no of args is provided
-# and if the argument is a valid integer
-def main():
-    if len(sys.argv) != 2 or not sys.argv[1].isdigit():
-        print("Usage: python3 gather_data_from_an_API.py <employee_id>")
+    # displays the TODO list progress in this format
+    return employee_name, completed_count, total_tasks, completed_tasks
+
+# this function prints the TODO list that has been generated in the format below
+def print_todo_list_progress(employee_name, completed_count, total_tasks, completed_tasks):
+    print(f"Employee {employee_name} is done with tasks({completed_count}/{total_tasks}):")
+    for task in completed_tasks:
+        print(f"\t{task['title']}")
+
+# this block checks if the script is being run directly
+# and takes the employee ID as a command line argument if that's the case
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python3 0-gather_data_from_an_API.py <employee_id>")
         sys.exit(1)
 
     employee_id = int(sys.argv[1])
-    user_data, todos_data = get_employee_data(employee_id)
-
-    # processes the data
-    total_tasks = len(todos_data)
-    completed_tasks = sum(1 for todo in todos_data if todo["completed"])
-
-    # displays the information
-    print(f"Employee {user_data['name']} is done with tasks({completed_tasks}/{total_tasks}):")
-    for todo in todos_data:
-        if todo["completed"]:
-            print(f"\t{todo['title']}")
-
-if __name__ == "__main__":
-    main()
+    employee_name, completed_count, total_tasks, completed_tasks = generate_employee_todo_progress(employee_id)
+    print_todo_list_progress(employee_name, completed_count, total_tasks, completed_tasks)
