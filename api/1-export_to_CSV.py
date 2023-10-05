@@ -9,8 +9,7 @@ import csv
 import requests
 import sys
 
-
-# this function block gets employee's TODO progress
+# function fetches employee details & calculates completed tasks
 def generate_employee_todo_progress(employee_id):
     user_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
     todos_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
@@ -29,27 +28,16 @@ def generate_employee_todo_progress(employee_id):
     total_tasks = len(todos_data)
     completed_count = len(completed_tasks)
 
-    # displays the TODO list progress in this format
+    # returns the TODO list progress
     return employee_name, completed_count, total_tasks, completed_tasks
 
-# this function prints the TODO list that has been generated in the given fornmat
+# function block prints the TODO list in the specified format
 def print_todo_list_progress(employee_name, completed_count, total_tasks, completed_tasks):
     print(f"Employee {employee_name} is done with tasks({completed_count}/{total_tasks}):")
     for task in completed_tasks:
         print(f"\t{task['title']}")
 
-# this block checks if the script is being run directly
-# it then takes the employee ID as a command line argument if that's the case
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python3 0-gather_data_from_an_API.py <employee_id>")
-        sys.exit(1)
-
-    employee_id = int(sys.argv[1])
-    employee_name, completed_count, total_tasks, completed_tasks = generate_employee_todo_progress(employee_id)
-    print_todo_list_progress(employee_name, completed_count, total_tasks, completed_tasks)
-
-# this new function writes the data to a CSV file
+# this new function block exports the data to a CSV file
 def export_to_csv(employee_id, employee_name, completed_tasks):
     filename = f"{employee_id}.csv"
     with open(filename, mode='w', newline='') as csv_file:
@@ -65,7 +53,7 @@ def export_to_csv(employee_id, employee_name, completed_tasks):
                 'TASK_TITLE': task['title']
             })
 
-# checks if the script is being run directly
+# # checks if the script is being run directly
 # if that's the case, it then takes the employee data as a command-line argument
 if __name__ == "__main__":
     if len(sys.argv) != 2:
@@ -76,5 +64,9 @@ if __name__ == "__main__":
     employee_name, completed_count, total_tasks, completed_tasks = generate_employee_todo_progress(employee_id)
     print_todo_list_progress(employee_name, completed_count, total_tasks, completed_tasks)
 
-    # exports the data to CSV
+    # exports to CSV
     export_to_csv(employee_id, employee_name, completed_tasks)
+
+    # this block reads the CSV file
+    with open(f"{employee_id}.csv", 'r') as f:
+        pass
