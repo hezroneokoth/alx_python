@@ -32,7 +32,7 @@ def generate_employee_todo_progress(employee_id):
 def print_todo_list_progress(employee_name, completed_count, total_tasks, completed_tasks):
     print(f"Employee {employee_name} is done with tasks({completed_count}/{total_tasks}):")
     for task in completed_tasks:
-        print(f"    {task['title']}")
+        print(f"\t{task['title']}")
 
 # this block checks if the script is being run directly
 # and takes the employee ID as a command line argument if that's the case
