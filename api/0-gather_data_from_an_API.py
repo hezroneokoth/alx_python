@@ -1,4 +1,5 @@
-"""Gather data from API
+#!/usr/bin/python3
+"""Gather Data from API.
 
 This script uses REST API (with employee data)
 and returns info about the employee's TODO list progress."""
@@ -33,7 +34,8 @@ def print_todo_list_progress(employee_name, completed_count, total_tasks, comple
     for task in completed_tasks:
         print(f"\t{task['title']}")
 
-# this block checks if the script is being run directly and takes the employee ID as a command line argument if that's the case
+# this block checks if the script is being run directly
+# and takes the employee ID as a command line argument if that's the case
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python3 0-gather_data_from_an_API.py <employee_id>")
