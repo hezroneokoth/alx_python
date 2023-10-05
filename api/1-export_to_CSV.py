@@ -5,9 +5,10 @@ This script uses REST API (with employee data)
 and returns info about the employee's TODO list progress.
 
 The extension to CSV format is added"""
+import csv
 import requests
 import sys
-import csv
+
 
 # this function block gets employee's TODO progress
 def generate_employee_todo_progress(employee_id):
