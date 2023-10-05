@@ -2,7 +2,10 @@
 """Gather Data from API.
 
 This script uses REST API (with employee data)
-and returns info about the employee's TODO list progress."""
+and returns info about the employee's TODO list progress.
+
+The script is now extended to export data in JSON format."""
+
 import json
 import requests
 import sys
