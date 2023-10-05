@@ -68,5 +68,7 @@ if __name__ == "__main__":
     export_to_csv(employee_id, employee_name, completed_tasks)
 
     # this block reads the CSV file
-    with open(f"{employee_id}.csv", 'r') as f:
-        pass
+    def user_info(employee_id):
+        filename = f"{employee_id}.csv"
+        with open(f"{employee_id}.csv", 'r') as f:
+            pass
