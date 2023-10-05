@@ -4,7 +4,6 @@
 This script uses REST API (with employee data)
 and returns info about the employee's TODO list progress."""
 import requests
-import sys
 
 # this function block gets employee's TODO progress
 def generate_employee_todo_progress(employee_id):
