@@ -28,11 +28,11 @@ def generate_employee_todo_progress(employee_id):
     # displays the TODO list progress in this format
     return employee_name, completed_count, total_tasks, completed_tasks
 
-# this function prints the TODO list that has been generated in the fornmat below
+# this function prints the TODO list that has been generated in the format below
 def print_todo_list_progress(employee_name, completed_count, total_tasks, completed_tasks):
     print(f"Employee {employee_name} is done with tasks({completed_count}/{total_tasks}):")
     for task in completed_tasks:
-        print(f"\t{task['title']}")
+        print(f"    {task['title']}")
 
 # this block checks if the script is being run directly
 # and takes the employee ID as a command line argument if that's the case
