@@ -347,7 +347,7 @@ The Python Tutorial - https://docs.python.org/3/tutorial/index.html
 
 Whetting Your Appetite - https://docs.python.org/3/tutorial/appetite.html
 
-Uisng the Python Interpreter - https://docs.python.org/3/tutorial/interpreter.html
+Using the Python Interpreter - https://docs.python.org/3/tutorial/interpreter.html
 
 An Informal Introduction to Python - https://docs.python.org/3/tutorial/introduction.html
 
@@ -369,6 +369,6 @@ Learn to Program 2: Looping - video - https://www.youtube.com/playlist?list=PLGL
 
 PEP 8 - Style Guide for Python Code - https://peps.python.org/pep-0008/
 
-Introductory Session - https://www.youtube.com/watch?t=266&v=VufXHNY_Fz8&embeds_referring_euri=https%3A%2F%2Fintranet.alxswe.com%2F&source_ve_path=OTY3MTQ&feature=emb_imp_woyt
+Introductory Session - https://www.youtube.com/watch?time_continue=272&v=VufXHNY_Fz8&embeds_referring_euri=https%3A%2F%2Fintranet.alxswe.com%2F&source_ve_path=Mjg2NjY&feature=emb_logo
 
-Live Learning Session - https://www.youtube.com/watch?time_continue=99&v=P2khHYKKZv8&embeds_referring_euri=https%3A%2F%2Fintranet.alxswe.com%2F&feature=emb_logo
+Live Learning Session - https://www.youtube.com/watch?time_continue=97&v=P2khHYKKZv8&embeds_referring_euri=https%3A%2F%2Fintranet.alxswe.com%2F&feature=emb_logo 
