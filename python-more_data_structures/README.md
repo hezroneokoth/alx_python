@@ -25,6 +25,128 @@
 5. Your code should use the PEP 8 style (version 1.7.*)
 6. The length of your files will be tested using wc
 
+## Quiz questions
+
+### Question #0
+
+What do these lines print?
+
+    >>> a = { 'id': 89, 'name': "John" }
+
+    >>> a.get('age')
+
+Nothing
+
+### Question #1
+
+What do these lines print?
+
+    >>> a = { 'id': 89, 'name': "John" }
+
+    >>> a['id']
+
+89
+
+### Question #2
+
+What do these lines print?
+
+    >>> for i in range(0, 3):
+
+    >>>     print(i, end=" ")
+
+0 1 2
+
+### Question #3
+
+What do these lines print?
+
+    >>> a = { 'id': 89, 'name': "John", 'projects': [1, 2, 3, 4] }
+
+    >>> a.get('projects')
+
+[1, 2, 3, 4]
+
+### Question #4
+
+What do these lines print?
+
+    >>> for i in range(1, 4):
+
+    >>>     print(i, end=" ")
+
+1 2 3
+
+### Question #5
+
+What do these lines print?
+
+    >>> for i in ["Hello", "Holberton", "School", 98]:
+
+    >>>     print(i, end=" ")
+
+Hello Holberton School 98
+
+### Question #6
+
+What do these lines print?
+
+    >>> for i in [1, 3, 4, 2]:
+
+    >>>     print(i, end=" ")
+
+1 3 4 2
+
+### Question #7
+
+What do these lines print?
+
+    >>> a = { 'id': 89, 'name': "John" }
+
+    >>> a.get('id')
+
+89
+
+### Question #8
+
+What do these lines print?
+
+    >>> for i in [1, 2, 3, 4]:
+
+    >>>     print(i, end=" ")
+
+1 2 3 4
+
+### Question #9
+
+What do these lines print?
+
+    >>> a = { 'id': 89, 'name': "John", 'projects': [1, 2, 3, 4], 'friends': [ { 'id': 82, 'name': "Bob" }, { 'id': 83, 'name': "Amy" } ] }
+
+    >>> a.get('friends')[-1].get("name")
+
+Amy
+
+### Question #10
+
+What do these lines print?
+  
+    >>> a = { 'id': 89, 'name': "John", 'projects': [1, 2, 3, 4] }
+
+    >>> a.get('projects')[3]
+
+4
+
+### Question #11
+
+What do these lines print?
+
+    >>> a = { 'id': 89, 'name': "John" }
+
+    >>> a.get('age', 0)
+
+0
+
 ## Tasks
 
 ### 0.  Squared simple
@@ -293,9 +415,13 @@ In regards with copyright, all lie with the developer
 
 ## Contact
 
-Hezrone Okoth - @that_heazrone - hezrone.okoth@icloud.com
+x - @that_heazrone
 
-Project Link: https://github.com/hezroneokoth/alx_python
+blog - wordpress/lifesoddity.com
+
+email - hezrone.okoth@icloud.com
+
+Project link - https://github.com/hezroneokoth/alx_python
 
 ## Acknowledgments
 
