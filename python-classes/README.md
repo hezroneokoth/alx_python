@@ -46,6 +46,221 @@ As usual, make sure you type (never copy and paste), test, understand all exampl
 9. All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 10. A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
 
+## Quiz questions
+
+### Question #0
+
+In this following code, what is __password?
+
+    class User:
+    
+        id = 89
+    
+        name = "no name"
+    
+        __password = None
+
+    
+        def __init__(self, new_name=None):
+        
+            self.is_new = True
+        
+            if new_name is not None:
+            
+                self.name = new_name
+
+A private class attribute
+
+### Question #1
+
+In this following code, what is User?
+
+
+    class User:
+    
+        id = 89
+    
+        name = "no name"
+    
+        __password = None
+
+    
+        def __init__(self, new_name=None):
+        
+            self.is_new = True
+        
+            if new_name is not None:
+            
+                self.name = new_name
+
+A class
+
+### Question #2
+
+What do these lines print?
+
+    >>> class User:
+
+    >>>     id = 89
+
+    >>>     name = "no name"
+
+    >>>     __password = None
+
+    >>>     
+
+    >>>     def __init__(self, new_name=None):
+
+    >>>         self.is_new = True
+
+    >>>         if new_name is not None:
+
+    >>>             self.name = new_name
+
+    >>> 
+
+    >>> u = User()
+
+    >>> u.name
+
+no name
+
+### Question #3
+
+What do these lines print?
+
+    >>> class User:
+
+    >>>     id = 89
+
+    >>>     name = "no name"
+
+    >>>     __password = None
+
+    >>>     
+
+    >>>     def __init__(self, new_name=None):
+
+    >>>         self.is_new = True
+
+    >>>         if new_name is not None:
+
+    >>>             self.name = new_name
+
+    >>> 
+
+    >>> u = User()
+
+    >>> u.is_new
+
+True
+
+### Question #4
+
+In this following code, what is id?
+
+    class User:
+    
+        id = 89
+    
+        name = "no name"
+    
+        __password = None
+
+    
+        def __init__(self, new_name=None):
+        
+            self.is_new = True
+        
+            if new_name is not None:
+            
+                self.name = new_name
+
+A public class attribute
+
+### Question #5
+
+What do these lines print?
+
+    >>> class User:
+
+    >>>     id = 89
+
+    >>>     name = "no name"
+
+    >>>     __password = None
+
+    >>>     
+
+    >>>     def __init__(self, new_name=None):
+
+    >>>         self.is_new = True
+
+    >>>         if new_name is not None:
+
+    >>>             self.name = new_name
+
+    >>> 
+
+    >>> u = User("John")
+
+    >>> u.name
+
+John
+
+### Question #6
+
+What do these lines print?
+
+    >>> class User:
+
+    >>>     id = 89
+
+    >>>     name = "no name"
+
+    >>>     __password = None
+
+    >>>     
+
+    >>>     def __init__(self, new_name=None):
+
+    >>>         self.is_new = True
+
+    >>>         if new_name is not None:
+
+    >>>             self.name = new_name
+
+    >>> 
+
+    >>> u = User()
+
+    >>> u.id
+
+89
+
+### Question #7
+
+In this following code, what is is_new?
+
+    class User:
+    
+        id = 89
+    
+        name = "no name"
+    
+        __password = None
+
+    
+        def __init__(self, new_name=None):
+        
+            self.is_new = True
+        
+            if new_name is not None:
+            
+                self.name = new_name
+
+A public instance attribute
+
 ## Tasks
 
 ### 0.   Square with size
@@ -420,7 +635,9 @@ In regards with copyright, all lie with the developer
 
 ## Contact
 
-Hezrone Okoth - @that_heazrone - hezrone.okoth@icloud.com
+x - @that_heazrone
+
+blog - wordpress/lifesoddity.com
 
 Project Link: https://github.com/hezroneokoth/alx_python
 
