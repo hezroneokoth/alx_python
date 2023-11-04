@@ -62,6 +62,7 @@ You will also learn about:
 9. All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 10. A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
 
+
 ## Tasks
 
 ### 0.  Base class
@@ -762,9 +763,9 @@ In regards with copyright, all lie with the developer
 
 ## Contact
 
-Hezrone Okoth
+blog - wordpress/lifesoddity.com
 
-twitter @that_heazrone
+x - @that_heazrone
 
 Project Link: https://github.com/hezroneokoth/alx_python
 
